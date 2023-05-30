@@ -22,8 +22,15 @@ public class Main {
     public static void main(String[] args) {
 
         Vending vending = new Vending();
-        Product product1 = new Product();
-        product1.kind = "Apple";
+        Product product1 = new Product("Apple", 20, 1L);
+        Product product2 = new Product("Orange", 30, 2L);
+        Product product3 = new Product("Banana", 25, 3L);
+
+        vending.addProduct(product1);
+        vending.addProduct(product2);
+        vending.addProduct(product3);
+
+        //product1.kind = "Apple";
 
         vending.addProduct(product1);
         System.out.println(vending.getProduct("Apple"));
